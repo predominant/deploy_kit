@@ -2,8 +2,14 @@
 /**
  * Deployment Kit main shell
  *
+ * Created by Graham Weldon (http://grahamweldon.com)
+ * Copyright (c) 2010 Graham Weldon
+ *
+ * Licensed under The MIT License
+ * Redistributions of files must retain the above copyright notice.
+ *
  * @package deployment_kit
- * @author Predominant
+ * @subpackage deploy_kit.vendors.shells.tasks
  */
 class DeployShell extends Shell {
 
@@ -20,17 +26,6 @@ class DeployShell extends Shell {
  * @var array
  */
 	public $tasks = array('Cache');
-
-/**
- * Run before all tasks
- *
- * @return void
- */
-	public function initialize() {
-		$this->_welcome();
-		$this->out(__('Deployment Kit Shell', true));
-		$this->hr();
-	}
 
 /**
  * Default operation when no tasks specified. This provides a help message if
@@ -52,6 +47,7 @@ class DeployShell extends Shell {
  */
 	public function help() {
 		$help = <<<TEXT
+
 The CakePHP Deploy Kit helps ease production server deployment tasks. It
 cleans out caches to force CakePHP to reindex and cache important files
 such as database schemas etc.

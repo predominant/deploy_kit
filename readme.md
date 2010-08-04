@@ -10,9 +10,9 @@ Install the plugin as normal, by dropping the deployment_kit directory into your
 
 If you are comfortable using git, then setup the repository as a submodule for you project. You can do this by performing the following while in your /app directory:
 
-	git submodule add git://github.com/predominant/deployment_kit.git plugins/deployment_kit
-	git add plugins/deployment_kit .gitmodules
-	git commit -m "Added DeploymentKit plugin." plugins/deployment_kit .gitmodules
+	$ git submodule add git://github.com/predominant/deployment_kit.git plugins/deployment_kit
+	$ git add plugins/deployment_kit .gitmodules
+	$ git commit -m "Added DeploymentKit plugin." plugins/deployment_kit .gitmodules
 
 # Usage
 
@@ -20,6 +20,18 @@ If you are comfortable using git, then setup the repository as a submodule for y
 
 Cache clearing is necessary when updating production servers with the application configuration set with "Debug" at 0. When set to 0, cache files are stored to ensure maximum performance and minimum database and path reading. However, if your updates contain changes to your database structure then clearing the cache will be necessary to avoid issues with your application.
 
-Clear the cache with the following commands:
+You can clear the cache with the following commands:
 
-	cake deployment
+	$ cake deploy cache all
+
+This clears all caches.
+
+# Copyright and Licensing
+
+Created by Graham Weldon (http://grahamweldon.com)
+
+Copyright (c) 2010 Graham Weldon
+
+Licensed under The MIT License (http://www.opensource.org/licenses/mit-license.php)
+
+Redistributions of files must retain the above copyright notice.

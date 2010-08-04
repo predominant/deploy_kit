@@ -6,6 +6,7 @@
  * Copyright (c) 2010 Graham Weldon
  *
  * Licensed under The MIT License
+ * http://www.opensource.org/licenses/mit-license.php
  * Redistributions of files must retain the above copyright notice.
  *
  * @package deployment_kit
@@ -49,13 +50,11 @@ Usage: cake deploy [<command>] [<option> ..]
 ---------------------------------------------------------------
 
 Commands:
-	deploy cache [<cacheType>]
-		Clear the cache. Optionally provide a cache type to clear, such
-		as: all, model, view, persistent, main
+	deploy cache
+		Clear the cache.
 
-	deploy logs [<logType>]
-		Clear log files. Optionally provide a log name to clear, for example:
-		all, debug, error
+	deploy logs
+		Clear log files.
 
 Options:
 	-x

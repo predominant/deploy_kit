@@ -14,13 +14,6 @@
 class DeployShell extends Shell {
 
 /**
- * Dry run (don't modify caches / filesystem)
- *
- * @var boolean
- */
-	protected $_dry = true;
-
-/**
  * Deploy Tasks
  *
  * @var array

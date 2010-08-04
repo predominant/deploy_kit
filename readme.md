@@ -22,9 +22,11 @@ Cache clearing is necessary when updating production servers with the applicatio
 
 You can clear the cache with the following commands:
 
-	$ cake deploy cache all
+	$ cake deploy cache -x
 
-This clears all caches.
+This clears all caches. The -x switch tells it to bypass "dry run" mode, which will just list the files that _would_ have been deleted.
+
+Dry run is the default mode, and requires this switch to override, and acts as a measure to avoid accidental file deletion.
 
 # Copyright and Licensing
 
@@ -35,3 +37,9 @@ Copyright (c) 2010 Graham Weldon
 Licensed under The MIT License (http://www.opensource.org/licenses/mit-license.php)
 
 Redistributions of files must retain the above copyright notice.
+
+# Don't blame me (disclaimer)
+
+The code is good. I use it myself.
+
+But if somehow, this cache deletion code causes your own files to go missing... don't blame me.

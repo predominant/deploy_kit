@@ -28,7 +28,11 @@ class CacheTask extends Shell {
 
 		foreach (Cache::configured() as $name) {
 			$config = Cache::config($name);
-			Cache::clear($name);
+			if (Cache::clear($name)) {
+				$this->out('- Cleared ' . $name);
+			} else {
+				$this->out('! Failed clearing ' . $name);
+			}
 		}
 	}
 }

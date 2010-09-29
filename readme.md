@@ -1,10 +1,10 @@
-# CakePHP Deployment Kit
+# CakePHP Deployment Kit #
 
 This plugin is designed to assist the automated deployment of CakePHP applications to servers.
 
 Developed for use in CakePHP 1.3
 
-# Installation
+# Installation #
 
 Install the plugin as normal, by dropping the deployment_kit directory into your /app/plugins directory.
 
@@ -14,9 +14,9 @@ If you are comfortable using git, then setup the repository as a submodule for y
 	$ git add plugins/deployment_kit .gitmodules
 	$ git commit -m "Added DeploymentKit plugin." plugins/deployment_kit .gitmodules
 
-# Usage
+# Usage #
 
-## Cache clearing
+## Cache clearing ##
 
 Cache clearing is necessary when updating production servers with the application configuration set with "Debug" at 0. When set to 0, cache files are stored to ensure maximum performance and minimum database and path reading. However, if your updates contain changes to your database structure then clearing the cache will be necessary to avoid issues with your application.
 
@@ -28,7 +28,7 @@ This clears all caches. The -x switch tells it to bypass "dry run" mode, which w
 
 Dry run is the default mode, and requires this switch to override, and acts as a measure to avoid accidental file deletion.
 
-# Copyright and Licensing
+# Copyright and Licensing #
 
 Created by Graham Weldon (http://grahamweldon.com)
 
@@ -38,7 +38,7 @@ Licensed under The MIT License (http://www.opensource.org/licenses/mit-license.p
 
 Redistributions of files must retain the above copyright notice.
 
-# Don't blame me (disclaimer)
+# Don't blame me (disclaimer) #
 
 The code is good. I use it myself.
 
